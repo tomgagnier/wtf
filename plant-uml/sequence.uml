@@ -1,0 +1,16 @@
+@startuml
+
+title Do NOT kick cats!
+
+actor "Angry Man" as perp
+actor "Innocent Cat" as cat
+actor "Concerned Citizen" as citizen
+actor "Policeman" as popo
+
+perp -> cat : kicks
+citizen -> perp : observes
+citizen -> popo : reports
+popo -> perp : arrests
+
+@enduml
+

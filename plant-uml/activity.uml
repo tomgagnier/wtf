@@ -1,0 +1,16 @@
+@startuml
+
+title Waiting for Winter Tech Forum
+
+start
+
+if (WTF in session?) then (yes)
+  :Learn and have fun!;
+else (no)
+  :Chat on WTF slack channel;
+endif
+
+stop
+
+@enduml
+

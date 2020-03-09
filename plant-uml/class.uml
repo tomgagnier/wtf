@@ -1,0 +1,11 @@
+@startuml
+
+title Parish Hall
+
+class ParishHall
+
+Bruce - ParishHall : rents >
+ParishHall  *- MeetingRooms : has  4 >
+
+@enduml
+
