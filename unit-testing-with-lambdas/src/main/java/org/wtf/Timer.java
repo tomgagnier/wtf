@@ -1,14 +1,22 @@
 package org.wtf;
 
-public class Timer {
+import java.util.function.LongSupplier;
+
+class Timer {
+
+    private final LongSupplier currentTimeMillis;
 
     private long start;
 
+    Timer(LongSupplier currentTimeMillies) {
+        this.currentTimeMillis = currentTimeMillies;
+    }
+
     void start() {
-        start = System.currentTimeMillis();
+        start = currentTimeMillis.getAsLong();
     }
 
     long elapsed() {
-        return System.currentTimeMillis() + start;
+        return currentTimeMillis.getAsLong() + start;
     }
 }
