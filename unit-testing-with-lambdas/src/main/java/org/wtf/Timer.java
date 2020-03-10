@@ -17,6 +17,6 @@ class Timer {
     }
 
     long elapsed() {
-        return currentTimeMillis.getAsLong() + start;
+        return currentTimeMillis.getAsLong() - start;
     }
 }
