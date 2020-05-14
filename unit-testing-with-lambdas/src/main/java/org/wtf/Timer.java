@@ -2,6 +2,7 @@ package org.wtf;
 
 import java.util.function.LongSupplier;
 
+<<<<<<< HEAD
 class Timer {
 
     private final LongSupplier currentTimeMillis;

@@ -10,13 +10,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TimerTest {
 
-    @Test void lifecycle() {
-        List<Long> times = new ArrayList<Long>(asList(100L, 200L));
-
-        Timer timer = new Timer(() -> {return times.remove(0);});
-
-        timer.start();
-
+    @Test
+    void elapsedTime() {
+        List<Long> times = new ArrayList<>(asList(100L, 200L));
+        Timer      timer = new Timer(() -> times.remove(0));
         assertEquals(100, timer.elapsed());
     }
 }

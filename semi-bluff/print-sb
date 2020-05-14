@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+
+def p(pot:, bet:, fold:, win:)
+  call = 1.0 - fold
+  lose = 1.0 - win
+  ev = fold * pot + call * win * (pot + bet) - call * lose * bet
+  {pot: pot, bet: bet, fold: fold, win: win, call: call.round(2), lose: lose.round(2), ev: ev.round(2)}
+end
+
+
+puts "| pot | bet | fold| call| win | lose| ev"
+[0.3, 0.6].each do |win|
+  puts
+  [0.0, 0.2, 0.4, 0.6, 0.8, 1.0].each do |fold|
+    ev = p(pot: 100, bet: 100, win: win, fold: fold)
+    puts "| #{ev[:pot]} | #{ev[:bet]} | #{ev[:fold]} | #{ev[:call]} | #{ev[:win]} | #{ev[:lose]} | #{ev[:ev]}"
+  end
+end
+
+
+
+
+
+
